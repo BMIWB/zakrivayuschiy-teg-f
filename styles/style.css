@@ -76,7 +76,7 @@
 .card_title {
   font-size:  calc(var(--gap) + 8px);
   line-height:  calc(var(--gap) * 2.178);
-  font-variation-settings: "wght" var(--bold, 700);
+  font-variation-settings: var(--bold, 700);
 }
 
 .card_label {
@@ -125,10 +125,10 @@
   display: grid;
   border: 2px solid transparent;
   padding: 0;
-  cursor: pointer;
   background-color: transparent;
-  appearance: none;
   transition: border 0.3s ease-in-out;
+  cursor: pointer;
+  appearance: none;
 }
 
 .card__icon-button:focus {
@@ -146,20 +146,20 @@
 
 .button {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid var(--text-color, #000000);
-  background-color: var(--background-color, #ffffff);
   padding:  var(--gap)  calc(var(--gap) * 3 + 4px);
-  cursor: pointer;
-  font-size:  calc(var(--gap) + 4px);
+  overflow: hidden;
   font-family: var(--font-family-accent);
-  text-transform: inherit;
+  font-size:  calc(var(--gap) + 4px);
   text-align: center;
+  text-transform: inherit;
+  background-color: var(--background-color, #ffffff);
   transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .button:focus {
@@ -176,11 +176,11 @@
   inset: 0;
   z-index: -1;
   background-color: var(--text-color, #000000);
+  transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
   inline-size: 100%;
   block-size: 100%;
-  transition: transform 0.5s ease-in-out;
 }
 
 .button:hover::before {
@@ -198,8 +198,8 @@
   justify-content: center;
   align-items: center;
   gap: calc(var(--gap) - 2px);
-  padding: calc(var(--gap) * 1.5) calc(var(--gap) * 2);
   margin-top:  calc(var(--gap) - 17px);
+  padding: calc(var(--gap) * 1.5) calc(var(--gap) * 2);
 }
 
 .save-icon {
@@ -215,10 +215,10 @@
 
 .modal {
   border: 2px solid var(--text-color, #000000);
+  padding: calc(var(--gap) * 2.5) calc(var(--gap) * 3);
   font-family: var(--font-family-accent);
   font-size: calc(var(--gap) + 4px);
   line-height: calc(var(--gap) * 2.1);
-  padding: calc(var(--gap) * 2.5) calc(var(--gap) * 3);
   text-transform: uppercase;
   max-inline-size: calc(var(--gap) * 35 + 5px);
 }
@@ -230,8 +230,8 @@
 }
 
 .modal::backdrop {
-  background-color: var(--text-color, #000000);
   opacity: 0.75;
+  background-color: var(--text-color, #000000);
 }
 
 .modal_content {
@@ -242,9 +242,9 @@
 
 .modal_save-icon {
   flex-shrink: 0;
+  margin-block: calc(var(--gap) * 1.2);
   inline-size: calc(var(--gap) * 3.9);
   block-size: calc(var(--gap) * 3.9);
-  margin-block: calc(var(--gap) * 1.2);
 }
 
 .modal_button {
@@ -286,8 +286,8 @@
 
   .card {
     margin-inline: auto;
-    background-color: var(--background-color, #ffffff);
     border: 2px solid var(--text-color, #000000);
+    background-color: var(--background-color, #ffffff);
     max-inline-size: calc(var(--gap) * 69 + 6px);
   }
 
@@ -306,5 +306,14 @@
   .save-icon {
     inline-size: calc(var(--gap) * 3 - 2px);
     block-size: calc(var(--gap) * 3 - 2px);
+  }
+}
+
+@supports (-webkit-text-stroke: 1px var(--background-color, #ffffff)) or
+  (text-stroke: 1px var(--background-color, #ffffff)) {
+  .label_text {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--background-color, #ffffff);
+    text-stroke: 1px var(--background-color, #ffffff);
   }
 }
