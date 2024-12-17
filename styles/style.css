@@ -19,7 +19,7 @@
   background-size: cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: var(--normal, 400);
+  font-variation-settings: 'wght' 400 700;
 }
 
 .header {
@@ -76,7 +76,7 @@
 .card_title {
   font-size:  calc(var(--gap) + 8px);
   line-height:  calc(var(--gap) * 2.178);
-  font-variation-settings: var(--bold, 700);
+  font-variation-settings: 'wght' 700;
 }
 
 .card_label {

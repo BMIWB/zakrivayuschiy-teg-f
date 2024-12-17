@@ -1,9 +1,11 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --font-family: "Inter", sans-serif;
-  --normal: normal;
-  --bold: bold;
   --font-family-accent: "PressStart2P";
+  --font-size-header: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  --font-size-header-text: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  --margin-block: clamp(7.5rem, 7.324rem + 0.751vw, 8rem);
+  --gap: 10px;
   --text-color: #000000;
   --background-color: #ffffff;
   --background-image: 
@@ -13,8 +15,4 @@
   --counter: #000000;
   --sparks-fill: #ff0000;
   --like-fill: none;
-  --gap: 10px;
-  --font-size-header: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
-  --margin-block: clamp(7.5rem, 7.324rem + 0.751vw, 8rem);
-  --font-size-header-text: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   }
